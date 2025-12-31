@@ -29,6 +29,10 @@ def mock_fetch_from_jira(ticket_id: str) -> dict:
     Returns:
         A dictionary containing mock ticket data
     """
+    # Simulate a generic failure state to check error handling
+    if ticket_id == "ERROR-999":
+        raise Exception("API connection failed")
+        
     # Simulate different tickets based on ID
     mock_tickets = {
         "PROJ-123": {
