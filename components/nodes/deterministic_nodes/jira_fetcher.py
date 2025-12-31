@@ -1,4 +1,9 @@
 """
+Note for future me and anyone else that decides to use this project:
+    This node is entirely built by Claude Code as an example. That's why it looks pretty. I'll note anything I didn't at least partially write.
+"""
+
+"""
 Jira ticket fetcher node.
 
 This is a deterministic node - it doesn't use an LLM, just fetches data.

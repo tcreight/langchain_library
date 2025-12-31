@@ -8,6 +8,10 @@ the data flow explicit.
 
 from typing import TypedDict, NotRequired
 
+"""
+Note for future me and anyone else that decides to use this project:
+    JiraTicketState is entirely built by Claude Code as an example. That's why it looks pretty and has instructional comments. I'll note anything I didn't at least partially write.
+"""
 
 class JiraTicketState(TypedDict):
     """
