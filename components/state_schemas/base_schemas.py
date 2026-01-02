@@ -28,3 +28,7 @@ class JiraTicketState(TypedDict):
 
     # Optional: Error information if something goes wrong
     error: NotRequired[str]
+
+    # Optional: test case ideas, risk areas, acceptance criteria, etc.
+    analysis: NotRequired[dict]
+    ticket_summary: NotRequired[str]
