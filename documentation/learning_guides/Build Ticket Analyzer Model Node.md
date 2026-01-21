@@ -37,23 +37,23 @@ class JiraTicketState(TypedDict):
 - [x] Import necessary items: `ChatAnthropic`, state schema
 - [x] Write the `analyze_ticket()` function with proper type hints
 - [x] Extract `ticket_data` from state (check if it exists!)
-- [ ] Build a prompt that asks Claude to analyze the ticket
-- [ ] Initialize ChatAnthropic with model name
-- [ ] Invoke the LLM with your prompt
-- [ ] Parse the response into structured data
-- [ ] Return dict with analysis results
+- [x] Build a prompt that asks Claude to analyze the ticket
+- [x] Initialize ChatAnthropic with model name
+- [x] Invoke the LLM with your prompt
+- [x] Parse the response into structured data
+- [x] Return dict with analysis results
 
 ### Handle Edge Cases
 - [x] What if `ticket_data` doesn't exist in state? (return error)
-- [ ] What if the LLM call fails? (try/except)
+- [x] What if the LLM call fails? (try/except)
 - [x] What if the ticket has no description? (handle gracefully)
 
 ### Write Tests
-- [ ] Create `tests/unit/test_ticket_analyzer.py`
-- [ ] Test: Analyzer with valid ticket data (mock the LLM response)
-- [ ] Test: Analyzer without ticket_data in state (should error)
-- [ ] Test: Node returns a dict (required for LangGraph)
-- [ ] Run tests: `pytest tests/unit/test_ticket_analyzer.py`
+- [x] Create `tests/unit/test_ticket_analyzer.py`
+- [x] Test: Analyzer with valid ticket data (mock the LLM response)
+- [x] Test: Analyzer without ticket_data in state (should error)
+- [x] Test: Node returns a dict (required for LangGraph)
+- [x] Run tests: `pytest tests/unit/test_ticket_analyzer.py`
 
 ### Integration Testing
 - [ ] Update `examples/simple_graph.py` to include both nodes

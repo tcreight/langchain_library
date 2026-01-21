@@ -16,6 +16,7 @@ Run with: python examples/simple_graph.py
 
 from langgraph.graph import StateGraph, START, END
 from components.nodes.deterministic_nodes.jira_fetcher import fetch_jira_ticket
+from components.nodes.model_nodes.ticket_analyzer import analyze_ticket
 from components.state_schemas.base_schemas import JiraTicketState
 
 
@@ -26,6 +27,7 @@ builder = StateGraph(JiraTicketState)
 # Step 2: Add nodes (functions that process state)
 # The node name is auto-detected from the function name
 builder.add_node(fetch_jira_ticket)
+builder.add_node(analyze_ticket)
 
 # Step 3: Define the execution flow with edges
 # START → fetch_jira_ticket → END means:
@@ -33,7 +35,8 @@ builder.add_node(fetch_jira_ticket)
 #   2. Runs fetch_jira_ticket node
 #   3. Graph ends
 builder.add_edge(START, "fetch_jira_ticket")
-builder.add_edge("fetch_jira_ticket", END)
+builder.add_edge("fetch_jira_ticket", "analyze_ticket")
+builder.add_edge("analyze_ticket", END)
 
 # Step 4: Compile the graph into a runnable
 # This validates your graph structure and prepares it for execution
