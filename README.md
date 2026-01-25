@@ -25,7 +25,7 @@ A learning-focused library of reusable LangChain/LangGraph components for buildi
 - Python 3.10+
 - Basic understanding of Python (functions, dictionaries, type hints helpful but not required)
 - An Anthropic API key (get one at [console.anthropic.com](https://console.anthropic.com)). Or any
-LLM provider, I just happened to use Claude for this.
+LLM provider, I just happened to use ChatGPT for this.
 
 ### Setup
 
